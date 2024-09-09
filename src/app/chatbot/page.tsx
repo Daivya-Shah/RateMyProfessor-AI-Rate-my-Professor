@@ -31,7 +31,7 @@ const MessageBubble = styled(Box)(({ role }) => ({
   display: 'flex',
   alignItems: 'center',
   animation: 'fadeIn 0.3s ease-in-out',
-  whiteSpace: 'pre-wrap', // Ensure line breaks are respected
+  whiteSpace: 'pre-wrap',
   '@keyframes fadeIn': {
     from: { opacity: 0, transform: 'translateY(10px)' },
     to: { opacity: 1, transform: 'translateY(0)' },
@@ -104,23 +104,28 @@ export default function Home() {
         throw new Error('Network response was not ok');
       }
 
-      const reader = response.body.getReader();
-      const decoder = new TextDecoder();
-      let updatedContent = '';
+      // Ensure response.body is not null
+      if (response.body) {
+        const reader = response.body.getReader();
+        const decoder = new TextDecoder();
+        let updatedContent = '';
 
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-        updatedContent += decoder.decode(value, { stream: true });
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+          updatedContent += decoder.decode(value, { stream: true });
 
-        setMessages((prevMessages) => {
-          const updatedMessages = [...prevMessages];
-          updatedMessages[updatedMessages.length - 1] = {
-            ...updatedMessages[updatedMessages.length - 1],
-            content: updatedContent,
-          };
-          return updatedMessages;
-        });
+          setMessages((prevMessages) => {
+            const updatedMessages = [...prevMessages];
+            updatedMessages[updatedMessages.length - 1] = {
+              ...updatedMessages[updatedMessages.length - 1],
+              content: updatedContent,
+            };
+            return updatedMessages;
+          });
+        }
+      } else {
+        throw new Error('Response body is null');
       }
     } catch (error) {
       console.error('Error:', error);
@@ -135,19 +140,18 @@ export default function Home() {
     setMessage('');
   };
 
-  const handleKeyPress = (event) => {
+  const handleKeyPress = (event: React.KeyboardEvent<HTMLDivElement>) => {
     if (event.key === 'Enter' && !event.shiftKey) {
       event.preventDefault();
       sendMessage();
     }
   };
 
-  const messagesEndRef = useRef(null);
+  const messagesEndRef = useRef<HTMLDivElement | null>(null);
 
   const scrollToBottom = () => {
-    const element = messagesEndRef.current;
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    if (messagesEndRef.current) {
+      messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
