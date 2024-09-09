@@ -186,7 +186,7 @@ export default function HomePage() {
                 Cutting-Edge RAG Technology
               </Typography>
               <Typography variant="body2" sx={{ marginTop: 1, color: 'grey' }}>
-                Harness the power of Retrieval-Augmented Generation (RAG) for real-time, data-driven academic decisions stored in Pinecone's advanced index.
+                Harness the power of Retrieval-Augmented Generation (RAG) for real-time, data-driven academic decisions stored in Pinecone&aposs advanced index.
               </Typography>
             </Paper>
           </Grid>

@@ -100,7 +100,7 @@ export default function AddProfessor() {
             <a href="https://www.ratemyprofessors.com/" target="_blank" rel="noopener noreferrer" style={{ color: '#1976d2', textDecoration: 'none' }}>
               RateMyProfessors
             </a>
-            . Enter the URL of the professor in the field below and click "Scrape". The system will process your request and fetch the reviews of the professor from the site.
+            . Enter the URL of the professor in the field below and click &quotScrape&quot. The system will process your request and fetch the reviews of the professor from the site.
           </Typography>
         </Box>
 
