@@ -1,0 +1,64 @@
+{
+  "reviews": [
+    {
+      "professor": "Dr. Emily Johnson",
+      "subject": "Biology",
+      "stars": 4,
+      "review": "Dr. Johnson's lectures are engaging and well-structured. She's always willing to help during office hours."
+    },
+    {
+      "professor": "Prof. Michael Chen",
+      "subject": "Computer Science",
+      "stars": 5,
+      "review": "Brilliant professor! Prof. Chen's passion for the subject is contagious. His programming assignments are challenging but rewarding."
+    },
+    {
+      "professor": "Dr. Sarah Thompson",
+      "subject": "Psychology",
+      "stars": 3,
+      "review": "Dr. Thompson knows her stuff, but her lectures can be a bit dry. Exams are fair though."
+    },
+    {
+      "professor": "Prof. David Martinez",
+      "subject": "Mathematics",
+      "stars": 4,
+      "review": "Prof. Martinez explains complex concepts clearly. His problem sets are tough but great for learning."
+    },
+    {
+      "professor": "Dr. Rachel Lee",
+      "subject": "English Literature",
+      "stars": 5,
+      "review": "Dr. Lee's passion for literature is inspiring. Her feedback on essays is incredibly helpful."
+    },
+    {
+      "professor": "Prof. James Wilson",
+      "subject": "Physics",
+      "stars": 2,
+      "review": "Prof. Wilson seems knowledgeable, but his teaching style is confusing. Labs are poorly organized."
+    },
+    {
+      "professor": "Dr. Laura Garcia",
+      "subject": "History",
+      "stars": 4,
+      "review": "Dr. Garcia brings history to life with her storytelling. Her exams can be challenging but fair."
+    },
+    {
+      "professor": "Prof. Robert Taylor",
+      "subject": "Chemistry",
+      "stars": 3,
+      "review": "Prof. Taylor's lectures are okay, but the pace is too fast sometimes. Lab sessions are well-structured."
+    },
+    {
+      "professor": "Dr. Olivia Brown",
+      "subject": "Sociology",
+      "stars": 5,
+      "review": "Dr. Brown is an excellent teacher and researcher. Her classes spark great discussions."
+    },
+    {
+      "professor": "Prof. Daniel Kim",
+      "subject": "Economics",
+      "stars": 4,
+      "review": "Prof. Kim explains complex economic theories clearly. His real-world examples are very helpful."
+    }
+  ]
+}
